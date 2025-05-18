@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="btnGroup">
+        <div>
+            <p class="para">Hello</p>
+            <button id="btn1">Button 1</button>
+        </div>
+        <div>
+            <p class="para">hello 2</p>
+            <button id="btn2">Button 2</button>
+        </div>
+        <div>
+            <p class="para">hello 3</p>
+            <button id="btn3">Button 3</button>
+        </div>
+    </div>
+    <script>
+        const btnGroup = document.querySelector('.btnGroup')
+        btnGroup.addEventListener('click', (e) => {
+            if (e.target.classList.length === 0) {
+                const elem = e.target.closest('div').querySelector('p')
+                console.log(elem.textContent)
+            }
+        })
+
+    </script>
+</body>
+
+</html>
